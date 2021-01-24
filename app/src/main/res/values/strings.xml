@@ -9,4 +9,8 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="_50">50</string>
+    <string name="increment_value">Increment Value</string>
+    <string name="decrement_value">Decrement Value</string>
+    <string name="number">Number</string>
 </resources>

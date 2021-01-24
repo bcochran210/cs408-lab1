@@ -16,26 +16,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
+        <TextView
             android:id="@+id/num"
-            android:layout_width="39dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:inputType="numberSigned"
-            android:text="50"
+            android:text="@string/_50"
             android:textSize="24sp" />
 
         <Button
             android:id="@+id/incButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Increment Value" />
+            android:text="@string/increment_value" />
 
         <Button
             android:id="@+id/decButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Decrement Value" />
+            android:text="@string/decrement_value" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

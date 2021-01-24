@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -22,12 +24,24 @@ public class FirstFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        view.findViewById(R.id.button_first).setOnClickListener(new View.OnClickListener() {
+        TextView startNum = (TextView)view.getRootView().findViewById(R.id.num);
+        view.findViewById(R.id.incButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
+                int newNum = Integer.parseInt(startNum.getText().toString()) + 1;
+                //String stringNewNum = int(startNum.getText().toString());
+                String result = String.valueOf(newNum);
+                startNum.setText(result);
+            }
+        });
+        view.findViewById(R.id.decButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TextView startNum = (TextView)view.getRootView().findViewById(R.id.num);
+                int newNum = Integer.parseInt(startNum.getText().toString()) - 1;
+                //String stringNewNum = int(startNum.getText().toString());
+                String result = String.valueOf(newNum);
+                startNum.setText(result);
             }
         });
     }
